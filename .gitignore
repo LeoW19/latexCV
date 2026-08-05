@@ -1,0 +1,24 @@
+## TEX build folder
+
+target_*/
+
+## LATEX
+*.aux
+*.log
+*.out
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+
+## Claude
+
+.claude
+
+## Encrypted assets: only ciphertext (*.jpg.age) is meant to be committed.
+## Plaintext .jpg here is always a local build artifact of decrypting it.
+src/img/*.jpg

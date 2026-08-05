@@ -1,0 +1,180 @@
+%-------------------------
+% Resume in Latex
+% Template: Jake Gutierrez (MIT License)
+% Adapted for Leo Wawrzyniak
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Leo Wawrzyniak} \\ \vspace{4pt}
+    \small
+    \href{mailto:leo.wawr@gmail.com}{\underline{leo.wawr@gmail.com}} $|$
+    Leipzig, Germany $|$
+    \href{https://www.linkedin.com/in/leo-wawrzyniak-lw/}{\underline{LinkedIn}} $|$
+    \href{https://github.com/LeoW19}{\underline{GitHub}}
+    \\ \vspace{2pt}
+    \textit{\small Fullstack Engineer $\cdot$ Python \& Java $\cdot$ AI/ML $\cdot$ Medical Engineering}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Master of Science -- Electrical and Information Engineering, Grade 1.9}{Oct. 2018 -- Sept. 2022}
+      {HTWK Leipzig $|$ Specialization: Medical Engineering \& Signal Processing}{Leipzig, Germany}
+      \resumeItemListStart
+        \resumeItem{\textbf{Thesis (ICCAS Leipzig):} Classification of cancerous tissue from hyperspectral microscopy data using deep learning (TensorFlow, Python)}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Bachelor of Engineering -- Electrical and Information Engineering, Grade 2.4}{Oct. 2015 -- Sept. 2018}
+      {HTWK Leipzig $|$ Erasmus: ESAIP France (Mar.--Jul. 2020)}{Leipzig, Germany}
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{Aug. 2025 -- present}
+      {avasis solutions GmbH}{Remote, Germany}
+      \resumeItemListStart
+        \resumeItem{Provided technical coordination and support for the support team -- independently resolved 100+ customer cases, leaving no ticket open}
+        \resumeItem{Analyzed and implemented customer solutions on the Polarion ALM platform (Java, JavaScript, PostgreSQL, REST, OAuth)}
+        \resumeItem{Managed CI/CD with GitHub Actions and server administration (Linux, Windows) in a live production environment}
+        \resumeItem{Migrated the PubMed interface from FTP to AWS within a single day -- ahead of the FTP shutdown in August 2026}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Developer}{Jul. 2023 -- Jul. 2025}
+      {NewTec GmbH}{Mannheim, Germany}
+      \resumeItemListStart
+        \resumeItem{Identified and fixed the root cause of a critical bug in a medical joystick application (IEC~62304) -- device returned to clinical use}
+        \resumeItem{Took ownership of software testing; project completed successfully -- product now deployed at a premium German automotive manufacturer}
+        \resumeItem{Developed and validated safety-critical embedded software according to ASPICE and ASIL-D (C, Python, STM-32)}
+        \resumeItem{Contributed to a company-wide AI working group; mentored working students}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Backend Developer -- Java}{Oct. 2022 -- Jun. 2023}
+      {Exxeta AG}{Mannheim, Germany}
+      \resumeItemListStart
+        \resumeItem{Developed and tested Spring Boot backend services, deployed via GitLab CI/Docker}
+        \resumeItem{Participated in an internal department competition evaluating local LLMs (Llama)}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+        {\textbf{HTWK: 3D-Visualization of MRT Data} $|$ \emph{DICOM, 3D-Dataset}}{2019}
+        \resumeItemListStart
+          \resumeItem{Loading and visualizing a 3D Dicom dataset of the human brain.}
+        \resumeItemListEnd
+       \resumeProjectHeading
+        {\textbf{Fraunhofer IZI: HDR microscopy prototyping} $|$ \emph{Python, Imaging, Evaluation}}{2019}
+        \resumeItemListStart
+          \resumeItem{Prototyping HDR algorithms for microscopy analysis in python}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Python, C/C++, JavaScript, SQL, HTML/CSS, TypeScript} \\
+     \textbf{Frameworks \& Libraries}{: Spring Boot, React, Node.js, FastAPI, TensorFlow, pandas, NumPy} \\
+     \textbf{Tools \& Platforms}{: Git, Docker, GitHub Actions, GitLab CI, Linux, PostgreSQL, Polarion ALM} \\
+     \textbf{Methodology}{: ASPICE, TDD, Requirements Engineering, CI/CD, UML, AI Driven Development}
+    }}
+ \end{itemize}
+
+
+%-----------CERTIFICATIONS + LANGUAGES-----------
+\section{Additional Information}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Certifications:} Claude Certified Architect (In Progress) $|$ Polarion Service Professional -- Siemens (2025, 2026) $|$ Certified Tester Foundation Level (2025) $|$ CPRE Foundation Level (2024) $|$ Azure Data Scientist Associate (2023) \\
+      \textbf{Languages:} German (Native) $|$ English (B2) $|$ French (B1)
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
