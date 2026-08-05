@@ -1,0 +1,32 @@
+name: Build CV
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build German CV
+        run: ./build.sh
+        env:
+          CV_LANG: de
+
+      - name: Build English CV
+        run: ./build.sh
+        env:
+          CV_LANG: en
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdfs
+          path: target_simple/*.pdf
+          if-no-files-found: error
